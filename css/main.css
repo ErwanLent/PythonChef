@@ -1,0 +1,1450 @@
+/*
+ *
+ * Customized HTML5 Boilerplate - Erwan Lent
+ *
+ */
+
+
+/* ==========================================================================
+   Py Chef Fonts
+   ========================================================================== */
+
+@font-face {
+    font-family: 'OpenSansLight';
+    src: url('webfonts/OpenSans-Light-webfont.eot');
+    src: url('webfonts/OpenSans-Light-webfont.eot?#iefix') format('embedded-opentype'),
+         url('webfonts/OpenSans-Light-webfont.woff') format('woff'),
+         url('webfonts/OpenSans-Light-webfont.ttf') format('truetype'),
+         url('webfonts/OpenSans-Light-webfont.svg#OpenSansLight') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'OpenSansRegular';
+    src: url('webfonts/OpenSans-Regular-webfont.eot');
+    src: url('webfonts/OpenSans-Regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('webfonts/OpenSans-Regular-webfont.woff') format('woff'),
+         url('webfonts/OpenSans-Regular-webfont.ttf') format('truetype'),
+         url('webfonts/OpenSans-Regular-webfont.svg#OpenSansRegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'OpenSansSemibold';
+    src: url('webfonts/OpenSans-Semibold-webfont.eot');
+    src: url('webfonts/OpenSans-Semibold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('webfonts/OpenSans-Semibold-webfont.woff') format('woff'),
+         url('webfonts/OpenSans-Semibold-webfont.ttf') format('truetype'),
+         url('webfonts/OpenSans-Semibold-webfont.svg#OpenSansSemibold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'Socialico';
+    src: url('webfonts/Socialico.eot');
+    src: url('webfonts/Socialico.eot?#iefix') format('embedded-opentype'),
+         url('webfonts/Socialico.ttf') format('truetype'),
+         url('webfonts/Socialico.svg#Socialico') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+  font-family: 'Source Sans Pro';
+  font-style: normal;
+  font-weight: 200;
+  src: local('Source Sans Pro ExtraLight'), local('SourceSansPro-ExtraLight'), url(http://themes.googleusercontent.com/static/fonts/sourcesanspro/v5/toadOcfmlt9b38dHJxOBGMa9awK0IKUjIWABZIchFI8.woff) format('woff');
+}
+@font-face {
+  font-family: 'Source Sans Pro';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Source Sans Pro'), local('SourceSansPro-Regular'), url(http://themes.googleusercontent.com/static/fonts/sourcesanspro/v5/ODelI1aHBYDBqgeIAH2zlBM0YzuT7MdOe03otPbuUS0.woff) format('woff');
+}
+@font-face {
+  font-family: 'Source Sans Pro';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Source Sans Pro Bold'), local('SourceSansPro-Bold'), url(http://themes.googleusercontent.com/static/fonts/sourcesanspro/v5/toadOcfmlt9b38dHJxOBGFkQc6VGVFSmCnC_l7QZG60.woff) format('woff');
+}
+@font-face {
+  font-family: 'Source Sans Pro';
+  font-style: italic;
+  font-weight: 400;
+  src: local('Source Sans Pro Italic'), local('SourceSansPro-It'), url(http://themes.googleusercontent.com/static/fonts/sourcesanspro/v5/M2Jd71oPJhLKp0zdtTvoMzNrcjQuD0pTu1za2FULaMs.woff) format('woff');
+}
+
+/* UI Kit Compilation - Erwan Lent */
+
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video {
+border:0;
+font-size:100%;
+font:inherit;
+vertical-align:baseline;
+margin:0;
+padding:0;
+}
+
+body {
+line-height:1.5;
+font:13px/24px "Open Sans","Helvetica Neue",Helvetica,Arial,sans-serif;
+font-weight:400;
+color:#34495e;
+-webkit-font-smoothing:antialiased;
+-webkit-text-size-adjust:100%;
+overflow-x:hidden;
+}
+
+ol,ul {
+list-style:none;
+margin:0;
+padding:0 0 0 30px;
+}
+
+blockquote,q {
+quotes:none;
+}
+
+blockquote:before,blockquote:after,q:before,q:after {
+content:none;
+}
+
+table {
+border-collapse:collapse;
+border-spacing:0;
+}
+
+a,a:visited,a:hover {
+outline:0;
+}
+
+.alignright {
+float:right;
+text-align:right;
+}
+
+.embed-container {
+position:relative;
+padding-bottom:56.25%;
+padding-top:30px;
+height:0;
+overflow:hidden;
+}
+
+.embed-container iframe,.embed-container object,.embed-container embed {
+position:absolute;
+top:0;
+left:0;
+width:100%;
+height:100%;
+}
+
+.hidden {
+display:none!important;
+}
+
+em {
+font-style:italic;
+}
+
+small {
+font-size:80%;
+}
+
+hr {
+border:solid #eee;
+clear:both;
+height:0;
+border-width:1px 0 0;
+margin:10px 0 30px;
+}
+
+pre {
+height:auto;
+font-family:Consolas,monospace;
+border:1px solid #f0f0f0;
+background:#fafafa;
+-moz-border-radius:2px;
+-webkit-border-radius:2px;
+border-radius:2px;
+overflow-x:auto;
+margin:0 0 20px;
+padding:10px 20px;
+}
+
+img {
+max-width:100%;
+height:auto;
+}
+
+a {
+color:#e74c3c;
+text-decoration:none;
+outline:0;
+-webkit-transition:all .2s ease;
+-moz-transition:all .2s ease;
+-ms-transition:all .2s ease;
+-o-transition:all .2s ease;
+transition:all .2s ease;
+}
+
+a:hover,a:focus {
+color:#666;
+}
+
+a:focus {
+outline:0;
+outline-offset:0;
+}
+
+p a,p a:visited {
+line-height:inherit;
+}
+
+ul,ol {
+margin-bottom:20px;
+}
+
+ul {
+list-style:none;
+}
+
+ul.styled-list {
+padding:0;
+}
+
+ol {
+list-style:decimal;
+}
+
+.alignleft {
+text-align:left;
+}
+
+.aligncenter {
+text-align:center;
+display:block;
+}
+
+h1,h2,h3,h4,h5,h6 {
+font-weight:400;
+font-family:'Open Sans',sans-serif;
+margin-bottom:20px;
+line-height:1em;
+text-transform:none;
+}
+
+
+h1 {
+font-size:40px;
+margin-bottom:0;
+}
+
+h2 {
+font-size:30px;
+font-weight:600;
+}
+
+h3 {
+font-size:24px;
+}
+
+h4 {
+font-size:20px;
+}
+
+h5 {
+font-size:18px;
+font-weight:600;
+}
+
+p {
+margin-bottom:25px;
+}
+
+header 
+{
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    color: #FFF;
+    position: absolute;
+    background-image: url('../img/background.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    background-attachment: fixed;
+    min-width: 100%;
+    min-height: 100%;
+}
+
+
+/* ==========================================================================
+   Base styles: opinionated defaults
+   ========================================================================== */
+
+html,
+button,
+input,
+select,
+textarea {
+    color: #222;
+}
+
+body {
+    font-size: 1em;
+    line-height: 1.4;
+}
+
+/*
+ * Remove text-shadow in selection highlight: h5bp.com/i
+ * These selection rule sets have to be separate.
+ * Customize the background color to match your design.
+ */
+
+::-moz-selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+::selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+/*
+ * A better looking default horizontal rule
+ */
+
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 1em 0;
+    padding: 0;
+}
+
+/*
+ * Remove the gap between images and the bottom of their containers: h5bp.com/i/440
+ */
+
+img {
+    vertical-align: middle;
+}
+
+/*
+ * Remove default fieldset styles.
+ */
+
+fieldset {
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+/*
+ * Allow only vertical resizing of textareas.
+ */
+
+textarea {
+    resize: vertical;
+}
+
+/* ==========================================================================
+   Chrome Frame prompt
+   ========================================================================== */
+
+.chromeframe {
+    margin: 0.2em 0;
+    background: #ccc;
+    color: #000;
+    padding: 0.2em 0;
+}
+
+/* ==========================================================================
+   Custom Py Chef Styling
+   ========================================================================== */
+
+* 
+{
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+}
+
+section
+{
+    position: relative;
+    background-color: #EEE;
+    padding: 70px 0px 50px;
+    margin: 0px auto;
+    text-align: center;
+    display: block;
+}
+
+section.dishes
+{
+    background-color: #F5F5F5;
+}
+
+.front-page
+{
+    position: absolute;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    bottom: 30%;
+}
+
+.utensils
+{
+    width: 190px;
+}
+
+.button {
+    padding: 8px 28px;
+    font-size: 14px;
+    font-weight: normal;
+    text-shadow: none;
+    display: inline-block;
+    border:0;
+    -webkit-border-radius: 1px;
+    -moz-border-radius: 1px;
+    -ms-border-radius: 1px;
+    -o-border-radius: 1px;
+    border-radius: 1px;
+    -webkit-transition: all 0.2s;
+    -moz-transition: all 0.2s;
+    -o-transition: all 0.2s;
+    transition: all 0.2s;
+    color: #ffffff;
+    cursor: pointer;
+    /*Website color theme here - The Py Chef: Orange*/
+    background-color: #e74c3c;
+}
+
+.button.border 
+{
+    border: 2px solid #fff;
+}
+
+.button:hover 
+{
+    color: #fff;
+    background-color: #34495e;
+}
+
+.button.large 
+{
+    padding:14px 50px;
+    font-size: 24px;
+    line-height: 24px !important;
+}
+
+.chef p
+{
+    text-align: justify;
+    line-height: 30px;
+    font-size: 15px;
+}
+
+.chef img
+{
+    width: 220px;
+    margin-bottom: 2em;
+    margin-top: 2em;
+}
+
+.cooking
+{
+    margin: 3% auto 3.5em auto;
+}
+
+.turn-animation img
+{
+    -webkit-transition: -webkit-transform 2s ease-out;
+    -moz-transition: -moz-transform 2s ease-out;
+    transition: transform 2s ease-out;
+}
+
+.turn-animation img:target
+{
+    -webkit-transform: rotateZ(360deg);
+    -moz-transform: rotateZ(360deg);
+    transform: rotateZ(360deg);
+}
+
+.dishes
+{
+  padding-bottom: 0;
+}
+
+.dishes-grid
+{
+    margin-top: 20px;
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.dishes-grid img
+{
+    height: 210px;
+    width: 300px;
+}
+
+.inner h2
+{
+    color: #555;
+    font: 40pt 'OpenSansLight';
+    padding: 30px 0px 0px 0px;
+}
+
+.inner.chef
+{
+    margin-left: auto;
+    margin-right: auto;
+    width: 70%;
+}
+
+.header-title
+{
+    font-family: 'OpenSansLight', sans-serif;
+    font-size: 80px;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    font-weight: lighter;
+    position: relative;
+    z-index: 100;
+    color: white;
+}
+
+.header-text 
+{
+    font-family: 'OpenSansRegular', sans-serif;
+    font-size: 36pt;
+    font-weight: 300;
+    display: inline-block;
+    line-height: 70px;
+    height: 70px;
+    vertical-align: middle;
+    overflow: hidden;
+    color: #FFF;
+    text-shadow: 0 1px 0 rgba(0,0,0,0.01);
+    z-index: 100;
+}
+
+.header-button
+{
+    background: 0;
+    margin-bottom: 15px;
+}
+
+.lead
+{
+    font-family: 'OpenSansRegular', sans-serif;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #BBB;
+    margin-bottom: 0px;
+    font-size: 22px;
+}
+
+.proposals
+{
+  background-color: #F5F5F5;
+}
+
+.proposals table
+{
+  max-width: 1100px;
+  width: 100%;
+  text-align: left;
+  margin: 65px auto 20px auto;
+}
+
+.proposals th
+{
+  text-align: center;
+}
+
+.title-line 
+{
+    border-bottom: 1px solid #D5D5D5;
+    display: block;
+    height: 1px;
+    margin: auto;
+    width: 90px;
+}
+
+.separator
+{
+    height: 100%;
+    min-height: 250px;
+    background-image: url('../img/separator.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.separator h2
+{
+    color: white;
+    font: 30pt 'OpenSansLight';
+}
+
+.separator .title-line
+{
+    margin-top: .5em;
+}
+
+.slogan 
+{
+    position:relative;
+    display:block;
+    text-align:center;
+    width:100%;
+    color:#fff;
+    font-size:30px;
+    font-weight:600;
+}
+
+.slogan .button:hover 
+{
+    background-color:#fff;
+    color: #34495e;
+    text-decoration: none;
+}
+
+.slogan p 
+{
+    margin:0 0 2%;
+}
+
+.small
+{
+  font: 13px/24px "Open Sans","Helvetica Neue",Helvetica,Arial,sans-serif;
+  text-decoration: none;
+  padding: 7px 14px;
+  background: transparent;
+  color: #555;
+  box-shadow: 0 0 1px #000;
+  text-decoration: none;
+}
+
+.small:hover
+{
+  box-shadow: 0 0 5px #000;
+  background: #000;
+  color: #fff;
+  text-decoration: none;
+}
+
+#wrapper
+{
+    position: absolute;
+    top: 100%;
+    width: 100%;
+}
+
+#loader
+{
+    position: fixed;
+    z-index: 998;
+    background-color: white;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    overflow: hidden;
+}
+
+
+#loader h1
+{
+    font-family: source sans pro, sans-serif;
+    -webkit-margin-before: 0.67em;
+    -webkit-margin-after: 0.67em;
+    text-align: center;
+    font-weight: 200;
+    line-height: 1.3;
+    color: #333;
+    margin-top: 1em;
+    margin-bottom: 0.4em;
+    font-size: 3em;
+    background: #fff;
+    z-index: 999;
+}
+
+#loader i 
+{
+    color: #aaa;
+    font-style: normal;
+    font-weight: 200;
+}
+
+
+/* ==========================================================================
+   Dishes Grid - Captions
+   ========================================================================== */
+
+.dish-grid 
+{
+    display: inline-block;
+    width: 300px;
+    height: 210px;
+    margin: 20px;
+    overflow: hidden;
+    position: relative;
+    text-align: center;
+    cursor: default;
+}
+
+.mask, .dish-grid .content 
+{
+    width: 300px;
+    height: 210px;
+    position: absolute;
+    overflow: hidden;
+    top: 0;
+    left: 0
+}
+
+.dish-grid img 
+{
+    display: block;
+    position: relative
+}
+
+.dish-grid h2 
+{
+    text-transform: uppercase;
+    color: #fff;
+    text-align: center;
+    position: relative;
+    font-size: 17px;
+    padding: 10px;
+    background: rgba(0, 0, 0, 0.8);
+    margin: 20px 0 0 0
+}
+
+.dish-grid p 
+{
+    font-family: Georgia, serif;
+    font-style: italic;
+    font-size: 12px;
+    position: relative;
+    color: #fff;
+    padding: 10px 20px 20px;
+    text-align: center
+}
+
+.dish-grid a.info 
+{
+    font: 13px/24px "Open Sans","Helvetica Neue",Helvetica,Arial,sans-serif;
+    text-decoration: none;
+    padding: 7px 14px;
+    background: transparent;
+    color: #555;
+    box-shadow: 0 0 1px #000
+}
+
+.dish-grid a.info:hover 
+{
+    box-shadow: 0 0 5px #000;
+    background: #000;
+    color: #fff;
+}
+
+.dish-caption img 
+{
+    transition: all 0.3s ease-in-out; 
+}
+
+.dish-caption .mask 
+{ 
+    transform: translateX(-300px);
+    opacity: 1;
+    transition: all 0.4s ease-in-out; 
+}
+
+.dish-caption h2
+{
+    background: rgba(255, 255, 255, 0.5);
+    color: #000;
+    box-shadow: 0px 1px 3px rgba(159, 141, 140, 0.5);
+}
+
+.dish-caption p
+{
+    opacity: 0;
+    color: black;
+    transition: all 0.2s linear;
+}
+
+.dish-caption:hover .mask 
+{ 
+    transform: translateX(0px);
+}  
+
+.dish-caption:hover img
+{ 
+    transform: translateX(300px);
+    transition-delay: 0.1s;
+}
+
+.dish-caption:hover p
+{
+    opacity: 1;
+    transition-delay: 0.4s;
+}
+
+.dish-caption img 
+{
+   -webkit-transition: all 0.3s ease-in-out;
+   -moz-transition: all 0.3s ease-in-out;
+   -o-transition: all 0.3s ease-in-out;
+   -ms-transition: all 0.3s ease-in-out;
+   transition: all 0.3s ease-in-out;
+}
+
+.dish-caption .mask 
+{
+   background-color: #F5F5F5;
+   border: 1px solid #CCC;
+   -webkit-transform: translateX(-300px);
+   -moz-transform: translateX(-300px);
+   -o-transform: translateX(-300px);
+   -ms-transform: translateX(-300px);
+   transform: translateX(-300px);
+   -ms-filter: "progid: DXImageTransform.Microsoft.Alpha(Opacity=100)";
+   filter: alpha(opacity=100);
+   opacity: 1;
+   -webkit-transition: all 0.3s ease-in-out;
+   -moz-transition: all 0.3s ease-in-out;
+   -o-transition: all 0.3s ease-in-out;
+   -ms-transition: all 0.3s ease-in-out;
+   transition: all 0.3s ease-in-out;
+}
+
+.dish-caption h2 
+{
+   background: rgba(255, 255, 255, 0.5);
+   color: #000;
+   -webkit-box-shadow: 0px 1px 3px rgba(159, 141, 140, 0.5);
+   -moz-box-shadow: 0px 1px 3px rgba(159, 141, 140, 0.5);
+   box-shadow: 0px 1px 3px rgba(159, 141, 140, 0.5);
+}
+
+.dish-caption p 
+{
+   -ms-filter: "progid: DXImageTransform.Microsoft.Alpha(Opacity=0)";
+   filter: alpha(opacity=0);
+   opacity: 0;
+   -webkit-transition: all 0.2s linear;
+   -moz-transition: all 0.2s linear;
+   -o-transition: all 0.2s linear;
+   -ms-transition: all 0.2s linear;
+   transition: all 0.2s linear;
+}
+
+.dish-caption:hover .mask 
+{
+   -webkit-transform: translateX(0px);
+   -moz-transform: translateX(0px);
+   -o-transform: translateX(0px);
+   -ms-transform: translateX(0px);
+   transform: translateX(0px);
+}
+
+.dish-caption:hover img 
+{
+   -webkit-transform: translateX(300px);
+   -moz-transform: translateX(300px);
+   -o-transform: translateX(300px);
+   -ms-transform: translateX(300px);
+   transform: translateX(300px);
+}
+
+.dish-caption:hover p 
+{
+   -ms-filter: "progid: DXImageTransform.Microsoft.Alpha(Opacity=100)";
+   filter: alpha(opacity=100);
+   opacity: 1;
+}
+
+/* ==========================================================================
+   Lightbox Form Modifications
+   ========================================================================== */
+
+#propose-recipe ul li
+{
+  margin: 15px;
+}
+
+#propose-recipe label
+{
+  display: block;
+}
+
+#propose-recipe textarea
+{
+  width: 100%;
+}
+
+#propose-recipe p
+{
+  margin-top: 10px;
+}
+
+#propose-recipe #ingredient
+{
+  display: inline;
+}
+
+#propose-recipe input, textarea
+{
+  padding: 3px;
+  padding: 7px 20px;
+  outline: 0;
+  font-family: "Open Sans";
+  font-size: 13px;
+  margin: 0;
+  display: block;
+  color: #bdc3c7;
+  margin-top: 10px;
+}
+
+#propose-recipe input[type="text"]:focus, textarea:focus
+{
+  border: 0;
+  outline-width: 0;
+  -moz-box-shadow:#e85849 0 0 1px 1px inset;
+  -webkit-box-shadow:#e85849 0 0 1px 1px inset;
+  box-shadow:#e85849 0 0 1px 1px inset;
+  color:#2c3e50;
+}
+
+#view-recipe table
+{
+  margin-top: 15px;
+}
+
+#view-recipe .recipe-instructions
+{
+  padding: 10px 20px;
+  margin: 0 0 20px;
+  border-left: 5px solid #eeeeee;
+}
+
+#view-recipe .recipe-instructions p
+{
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 15px;
+  font-weight: 300;
+  line-height: 1.7;
+  margin: 0 0 10px;
+  display: block;
+  -webkit-margin-before: 1em;
+  -webkit-margin-after: 1em;
+  -webkit-margin-start: 0px;
+  -webkit-margin-end: 0px;
+}
+
+
+.button.error
+{
+  display: none;
+  text-decoration: none;
+}
+
+form h1
+{
+  margin: 0;
+  font-weight: 400;
+  text-rendering: optimizelegibility;
+  color: #282B30;
+  font-family: Calibri,"PT Sans","Trebuchet MS",'Helvetica Neue',Arial;
+  display: block;
+  font-size: 2em;
+  line-height: 1.6;
+  }
+
+
+/* ==========================================================================
+   CSS Animations
+   ========================================================================== */
+
+@-webkit-keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+@-moz-keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+@keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+ 
+.fade-in 
+{
+    -webkit-animation:fadeIn ease-in 1;
+    -moz-animation:fadeIn ease-in 1;
+    animation:fadeIn ease-in 1;
+    opacity: 0.7;
+    filter: alpha(opacity=70);
+ 
+    -webkit-animation-fill-mode:forwards;
+    -moz-animation-fill-mode:forwards;
+    animation-fill-mode:forwards;
+ 
+    -webkit-animation-duration:1s;
+    -moz-animation-duration:1s;
+    animation-duration:1s;
+}
+ 
+.fade-in.one 
+{
+  -webkit-animation-delay: 0.3s;
+  -moz-animation-delay: 0.3s;
+  animation-delay: 0.3s;
+}
+
+#movingBallG
+{
+  position:relative;
+  width:159px;
+  height:13px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.movingBallLineG
+{
+  position:absolute;
+  left:0px;
+  top:5px;
+  height:2px;
+  width:159px;
+  background-color:#EDEDED;
+}
+
+.movingBallG
+{
+  background-color:#000000;
+  position:absolute;
+  top:0;
+  left:0;
+  width:13px;
+  height:13px;
+  -moz-border-radius:7px;
+  -moz-animation-name:bounce_movingBallG;
+  -moz-animation-duration:1.7s;
+  -moz-animation-iteration-count:infinite;
+  -moz-animation-direction:linear;
+  -webkit-border-radius:7px;
+  -webkit-animation-name:bounce_movingBallG;
+  -webkit-animation-duration:1.7s;
+  -webkit-animation-iteration-count:infinite;
+  -webkit-animation-direction:linear;
+  -ms-border-radius:7px;
+  -ms-animation-name:bounce_movingBallG;
+  -ms-animation-duration:1.7s;
+  -ms-animation-iteration-count:infinite;
+  -ms-animation-direction:linear;
+  -o-border-radius:7px;
+  -o-animation-name:bounce_movingBallG;
+  -o-animation-duration:1.7s;
+  -o-animation-iteration-count:infinite;
+  -o-animation-direction:linear;
+  border-radius:7px;
+  animation-name:bounce_movingBallG;
+  animation-duration:1.7s;
+  animation-iteration-count:infinite;
+  animation-direction:linear;
+}
+
+@-moz-keyframes bounce_movingBallG{
+0%{
+left:0px;
+}
+
+50%{
+left:147px;
+}
+
+100%{
+left:0px;
+}
+
+}
+
+@-webkit-keyframes bounce_movingBallG{
+0%{
+left:0px;
+border-radius: 6px;
+}
+
+50%{
+left:147px;
+}
+
+100%{
+left:0px;
+}
+
+}
+
+@-ms-keyframes bounce_movingBallG{
+0%{
+left:0px;
+}
+
+50%{
+left:147px;
+}
+
+100%{
+left:0px;
+}
+
+}
+
+@-o-keyframes bounce_movingBallG{
+0%{
+left:0px;
+}
+
+50%{
+left:147px;
+}
+
+100%{
+left:0px;
+}
+
+}
+
+@keyframes bounce_movingBallG{
+0%{
+left:0px;
+}
+
+50%{
+left:147px;
+}
+
+100%{
+left:0px;
+}
+
+}
+
+/* ==========================================================================
+   Media Queries
+   ========================================================================== */
+
+
+@media screen and (max-width: 601px) {
+
+    .front-page
+    {
+        bottom: 30%;
+    }
+
+}
+
+@media screen and (max-width: 500px) {
+
+    .utensils
+    {
+        width: 150px;
+    }
+
+    .header-title
+    {
+        font-size: 70px;
+    }
+
+        .front-page
+    {
+        bottom: 2%;
+    }
+}
+
+@media screen and (max-width: 400px) {
+
+    .front-page
+    {
+        bottom: 9%;
+    }
+
+}
+
+@media screen and (max-width: 1700px) {
+
+    .dishes-grid
+    {
+        width: 70%;
+    }
+
+}
+
+@media screen and (max-width: 1100px) {
+
+    .dishes-grid
+    {
+        width: 80%;
+    }
+
+}
+
+
+@media screen and (max-width: 880px) {
+
+    .dishes-grid
+    {
+        width: 100%;
+    }
+
+}
+
+
+@media screen and (max-height: 450px) {
+
+    .utensils
+    {
+        width: 100px;
+    }
+
+    .header-title
+    {
+        font-size: 50px;
+    }
+
+    .front-page
+    {
+        bottom: 1%;
+    }
+
+    .slogan
+    {
+        font-size: 20px;
+    }
+
+    .header-button
+    {
+        font-size: 30px;
+    }
+}
+
+@media screen and (max-height: 550px) {
+
+    .front-page
+    {
+        bottom: 2%;
+    }
+
+}
+
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+
+/*
+ * Image replacement
+ */
+
+.ir {
+    background-color: transparent;
+    border: 0;
+    overflow: hidden;
+    /* IE 6/7 fallback */
+    *text-indent: -9999px;
+}
+
+.ir:before {
+    content: "";
+    display: block;
+    width: 0;
+    height: 150%;
+}
+
+/*
+ * Hide from both screenreaders and browsers: h5bp.com/u
+ */
+
+.hidden {
+    display: none !important;
+    visibility: hidden;
+}
+
+/*
+ * Hide only visually, but have it available for screenreaders: h5bp.com/v
+ */
+
+.visuallyhidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+
+.hide-overflow
+{
+  overflow: hidden;
+}
+
+/*
+ * Extends the .visuallyhidden class to allow the element to be focusable
+ * when navigated to via the keyboard: h5bp.com/p
+ */
+
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
+    clip: auto;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    position: static;
+    width: auto;
+}
+
+/*
+ * Hide visually and from screenreaders, but maintain layout
+ */
+
+.invisible {
+    visibility: hidden;
+}
+
+/*
+ * Clearfix: contain floats
+ *
+ * For modern browsers
+ * 1. The space content is one way to avoid an Opera bug when the
+ *    `contenteditable` attribute is included anywhere else in the document.
+ *    Otherwise it causes space to appear at the top and bottom of elements
+ *    that receive the `clearfix` class.
+ * 2. The use of `table` rather than `block` is only necessary if using
+ *    `:before` to contain the top-margins of child elements.
+ */
+
+.clearfix:before,
+.clearfix:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+/*
+ * For IE 6/7 only
+ * Include this rule to trigger hasLayout and contain floats.
+ */
+
+.clearfix {
+    *zoom: 1;
+}
+
+/* ==========================================================================
+   EXAMPLE Media Queries for Responsive Design.
+   These examples override the primary ('mobile first') styles.
+   Modify as content requires.
+   ========================================================================== */
+
+@media only screen and (min-width: 35em) {
+    /* Style adjustments for viewports that meet the condition */
+}
+
+@media print,
+       (-o-min-device-pixel-ratio: 5/4),
+       (-webkit-min-device-pixel-ratio: 1.25),
+       (min-resolution: 120dpi) {
+    /* Style adjustments for high resolution devices */
+}
+
+/* ==========================================================================
+   Print styles.
+   Inlined to avoid required HTTP connection: h5bp.com/r
+   ========================================================================== */
+
+@media print {
+    * {
+        background: transparent !important;
+        color: #000 !important; /* Black prints faster: h5bp.com/s */
+        box-shadow: none !important;
+        text-shadow: none !important;
+    }
+
+    a,
+    a:visited {
+        text-decoration: underline;
+    }
+
+    a[href]:after {
+        content: " (" attr(href) ")";
+    }
+
+    abbr[title]:after {
+        content: " (" attr(title) ")";
+    }
+
+    /*
+     * Don't show links for images, or javascript/internal links
+     */
+
+    .ir a:after,
+    a[href^="javascript:"]:after,
+    a[href^="#"]:after {
+        content: "";
+    }
+
+    pre,
+    blockquote {
+        border: 1px solid #999;
+        page-break-inside: avoid;
+    }
+
+    thead {
+        display: table-header-group; /* h5bp.com/t */
+    }
+
+    tr,
+    img {
+        page-break-inside: avoid;
+    }
+
+    img {
+        max-width: 100% !important;
+    }
+
+    @page {
+        margin: 0.5cm;
+    }
+
+    p,
+    h2,
+    h3 {
+        orphans: 3;
+        widows: 3;
+    }
+
+    h2,
+    h3 {
+        page-break-after: avoid;
+    }
+}
