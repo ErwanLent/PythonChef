@@ -8,3 +8,5 @@ This site is responsive and uses no responsive frameworks.
 The site can be found live at http://pythonchef.com/
 
 Enjoy.
+
+![alt tag](http://erwanlent.com/pythonchef.png)
